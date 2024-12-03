@@ -100,11 +100,11 @@ ANPR starts by preparing the input image to make it suitable for analysis. The k
 ## Limitations: ⚠️
 In certain scenarios, such as when the text is unclear or EasyOCR misinterprets characters (e.g., recognizing '8' as 'B'), the accuracy may be affected, leading to potential mismatches with the actual license plates.
 
-**unclear text:**
+**unclear text:** The camera captured the text at an angle, making it appear unclear.
 
 https://github.com/user-attachments/assets/66aafa1b-7864-4257-b329-e2927f671ac4
 
-**misinterpreted text:**
+**misinterpreted text:** the '8' is recognised as a 'B'
 
 https://github.com/user-attachments/assets/50f2309b-76fd-4032-85ce-9eb9cbd730b4
 
