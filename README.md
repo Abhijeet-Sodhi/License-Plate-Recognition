@@ -53,23 +53,23 @@ To run the anpr.py Number Plate Detection project, you'll need to install the fo
 ## The Theory: 💡
 Automatic Number Plate Recognition (ANPR) is a **computer vision and OCR-based approach** used to identify and extract text (license plate numbers) from images of vehicles. Here’s the theory behind the implementation in anpr.py:
 
-## 1. Image Preprocessing
+### 1. Image Preprocessing
 ANPR starts by preparing the input image to make it suitable for analysis. The key steps include:
   - **Grayscale Conversion:** grayscale simplifies the algorithm and reduces computational requirements. Consider training neural articles on RGB images of 10x10x3 pixels. The input layer will have 300 input nodes. On the other hand, the same neural network will need only 100 input nodes for grayscale images.
   - **Edge Detection:** Uses the Canny Edge Detector to highlight the boundaries in the image, such as the edges of a license plate as they are rectangular and have sharp edges, making them identifiable in edge-detected images.
 
-## 2. Contour Detection
+### 2. Contour Detection
   - Contours are extracted to identify the region containing the license plate. Locate and sort the largest contours by area. Approximate each contour’s shape to check if it resembles a rectangle (four sides).
 
-## 3. Masking and Region of Interest (ROI)
+### 3. Masking and Region of Interest (ROI)
   - After identifying the license plate contour, the region is extracted using masking.
   - **Masking:** A binary mask highlights the area of interest (the license plate) while removing the background (the unnecessary detail).
   - **Bitwise AND Operation:** Combines the original image with the mask to retain only the license plate region.
 
-## 4. Optical Character Recognition (OCR)
+### 4. Optical Character Recognition (OCR)
   - OCR translates the cropped image of the license plate into text using **EasyOCR**.
   - **EasyOCR** applies a neural network to recognize and extract alphanumeric characters from images. It is trained on datasets containing various fonts and styles, enabling robust text recognition even under challenging conditions (blurry images, uneven lighting, etc.).
 
-## 5. Data Annotation and Saving
+### 5. Data Annotation and Saving
   - **Annotation:** The recognized text (license plate number) is overlaid on the original image for visualization.
   - **Data Logging:** Recognized license plate data is saved to a CSV file with timestamps for record-keeping.
