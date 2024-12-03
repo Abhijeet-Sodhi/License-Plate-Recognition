@@ -8,6 +8,8 @@ The base code for this project was adapted from Nicholas Renotte. While the orig
 
 ## Demo 🎬
 
+https://github.com/user-attachments/assets/c65a7e60-4a6a-4594-909a-f8721ca48bcc
+
 ## The Code files: 📄
 **anpr.py:** processes vehicle images to detect and read license plates using computer vision and OCR. It identifies the license plate region, extracts the text, annotates the image with the recognized plate number, and logs the results with timestamps into a CSV file.
 
@@ -97,4 +99,13 @@ ANPR starts by preparing the input image to make it suitable for analysis. The k
 
 ## Limitations: ⚠️
 In certain scenarios, such as when the text is unclear or EasyOCR misinterprets characters (e.g., recognizing '8' as 'B'), the accuracy may be affected, leading to potential mismatches with the actual license plates.
+
+**unclear text:**
+
+https://github.com/user-attachments/assets/66aafa1b-7864-4257-b329-e2927f671ac4
+
+**misinterpreted text:**
+
+https://github.com/user-attachments/assets/50f2309b-76fd-4032-85ce-9eb9cbd730b4
+
 
