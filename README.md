@@ -56,15 +56,24 @@ Automatic Number Plate Recognition (ANPR) is a **computer vision and OCR-based a
 ### 1. Image Preprocessing
 ANPR starts by preparing the input image to make it suitable for analysis. The key steps include:
   - **Grayscale Conversion:** grayscale simplifies the algorithm and reduces computational requirements. Consider training neural articles on RGB images of 10x10x3 pixels. The input layer will have 300 input nodes. On the other hand, the same neural network will need only 100 input nodes for grayscale images.
+
+  ![image](https://github.com/user-attachments/assets/6c61e7e1-53e0-4096-8884-ae411b7b887c)
+    
   - **Edge Detection:** Uses the Canny Edge Detector to highlight the boundaries in the image, such as the edges of a license plate as they are rectangular and have sharp edges, making them identifiable in edge-detected images.
+
+  ![image](https://github.com/user-attachments/assets/7df66b81-75d3-4318-b9f1-e0a68bb3dce2)
 
 ### 2. Contour Detection
   - Contours are extracted to identify the region containing the license plate. Locate and sort the largest contours by area. Approximate each contour’s shape to check if it resembles a rectangle (four sides).
+
+    ![image](https://github.com/user-attachments/assets/ec78f313-63a3-491c-9ba1-7ac81760bf3e)
 
 ### 3. Masking and Region of Interest (ROI)
   - After identifying the license plate contour, the region is extracted using masking.
   - **Masking:** A binary mask highlights the area of interest (the license plate) while removing the background (the unnecessary detail).
   - **Bitwise AND Operation:** Combines the original image with the mask to retain only the license plate region.
+
+  ![image](https://github.com/user-attachments/assets/48011cbe-7b4b-49dc-ba5f-9ac799bae509)
 
 ### 4. Optical Character Recognition (OCR)
   - OCR translates the cropped image of the license plate into text using **EasyOCR**.
@@ -73,3 +82,6 @@ ANPR starts by preparing the input image to make it suitable for analysis. The k
 ### 5. Data Annotation and Saving
   - **Annotation:** The recognized text (license plate number) is overlaid on the original image for visualization.
   - **Data Logging:** Recognized license plate data is saved to a CSV file with timestamps for record-keeping.
+
+  ![image](https://github.com/user-attachments/assets/e65effd9-b296-4104-94b6-a742e2104c24)
+
