@@ -95,3 +95,6 @@ ANPR starts by preparing the input image to make it suitable for analysis. The k
 
   ![image](https://github.com/user-attachments/assets/e65effd9-b296-4104-94b6-a742e2104c24)
 
+## Limitations: ⚠️
+In certain scenarios, such as when the text is unclear or EasyOCR misinterprets characters (e.g., recognizing '8' as 'B'), the accuracy may be affected, leading to potential mismatches with the actual license plates.
+
