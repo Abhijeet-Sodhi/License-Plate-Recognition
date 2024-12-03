@@ -56,6 +56,6 @@ Automatic Number Plate Recognition (ANPR) is a **computer vision and OCR-based a
 **1. Image Preprocessing**
 ANPR starts by preparing the input image to make it suitable for analysis. The key steps include:
 
-**Grayscale Conversion:** grayscale simplifies the algorithm and reduces computational requirements. Consider training neural articles on RGB images of 10x10x3 pixels. The input layer will have 300 input nodes. On the other hand, the same neural network will need only 100 input nodes for grayscale images.
+  - **Grayscale Conversion:** grayscale simplifies the algorithm and reduces computational requirements. Consider training neural articles on RGB images of 10x10x3 pixels. The input layer will have 300 input nodes. On the other hand, the same neural network will need only 100 input nodes for grayscale images.
 
-**Edge Detection:** Uses the Canny Edge Detector to highlight the boundaries in the image, such as the edges of a license plate as they are rectangular and have sharp edges, making them identifiable in edge-detected images.
+  - **Edge Detection:** Uses the Canny Edge Detector to highlight the boundaries in the image, such as the edges of a license plate as they are rectangular and have sharp edges, making them identifiable in edge-detected images.
