@@ -77,6 +77,14 @@ ANPR starts by preparing the input image to make it suitable for analysis. The k
 
 ### 4. Optical Character Recognition (OCR)
   - OCR translates the cropped image of the license plate into text using **EasyOCR**.
+
+  - this output tells us the coordinates of the number plate, the predicted text, and the confidence value of the predicted text:
+    ![image](https://github.com/user-attachments/assets/ffc94a67-2a7f-4584-ad37-98341fd0f738)
+
+  - this is the basic idea with coordinates as **[x, y]**:
+    ![image](https://github.com/user-attachments/assets/d27fe28d-dc18-436b-9304-dfe656adcaeb)
+
+
   - **EasyOCR** applies a neural network to recognize and extract alphanumeric characters from images. It is trained on datasets containing various fonts and styles, enabling robust text recognition even under challenging conditions (blurry images, uneven lighting, etc.).
 
 ### 5. Data Annotation and Saving
